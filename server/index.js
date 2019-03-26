@@ -1,14 +1,31 @@
-let express = require('express');
-let app = express();
-let port = 3000;
+let express = require('express'),
+    app = express(),
+    port = process.env.PORT || 3000,
 
-app.use(express.static(__dirname + '/'));
+    mongoose = require('mongoose'),
+    UserModel = require('./models/model'), //created model loading here
+    bodyParser = require('body-parser');
 
-app.get('/', function (req, res) {
-    // res.send('<h1>Hello world>');
-    res.sendFile('../exchange-client/public/index.html');
+// mongoose instance connection url connection
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost/Test');
+
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+app.use(bodyParser.json());
+
+var routes = require('./routes/router'); //importing route
+routes(app); //register the route
+
+app.listen(port, function () {
+
 });
 
-app.listen(3000, function () {
 
+//404 error
+app.use(function (req, res) {
+    res.status(405).send({
+        url: req.originalUrl + ' not found'
+    })
 });
