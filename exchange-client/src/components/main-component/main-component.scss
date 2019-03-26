@@ -1,0 +1,36 @@
+@import '../../common-styles/reponsive.scss';
+
+
+.side-bar {
+    display: initial;
+
+    @include md {
+        display: none;
+    }
+
+    @include lg {
+        display: none;
+    }
+
+    @include xl {
+        display: none;
+    }
+}
+
+#main {
+    header {
+        height: auto;
+        background: #fff;
+        padding: 0;
+    }
+
+    main {
+        padding: 24;
+        background: #fff;
+        min-height: 360;
+    }
+
+    footer {
+        text-align: center;
+    }
+}

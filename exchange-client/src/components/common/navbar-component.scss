@@ -1,0 +1,32 @@
+@import '../../common-styles/reponsive.scss';
+
+.ant-menu {
+    * {
+        &.item {
+            &:not(.show-sm) {
+                @include xs {
+                    display: none !important;
+                }
+
+                @include sm {
+                    display: none !important;
+                }
+            }
+
+            &.show-sm {
+                @include xs {
+                    border-bottom: 0;
+                }
+
+                @include sm {
+                    border-bottom: 0;
+                }
+            }
+
+            &.right {
+                float: right;
+            }
+        }
+    }
+
+}
