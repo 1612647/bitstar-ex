@@ -1,0 +1,16 @@
+@mixin auth-form {
+    padding: 16px 24px;
+    width: auto;
+    margin: 15px auto;
+    background: #fff;
+    max-width: 600px;
+
+    @include xs {
+        max-width: 400px;
+        margin-top: 50px;
+    }
+
+    @include sm {
+        max-width: 400px;
+    }
+}

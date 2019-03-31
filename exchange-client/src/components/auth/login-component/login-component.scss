@@ -1,0 +1,15 @@
+//Import mixin
+@import '../../../common-styles/reponsive.scss';
+@import '../../../common-styles/auth-form.scss';
+
+.login-form {
+    @include auth-form;
+
+    .login-form-forgot {
+        float: right;
+    }
+
+    .login-form-button {
+        width: 100%;
+    }
+}

@@ -17,6 +17,10 @@
     @include xl {
         display: none;
     }
+
+    .ant-layout-sider-zero-width-trigger {
+        top: 51px;
+    }
 }
 
 #main {
@@ -28,8 +32,7 @@
 
     main {
         padding: 24;
-        background: #fff;
-        min-height: calc(100vh - 138px);
+        min-height: calc(100vh - 118px);
     }
 
     footer {

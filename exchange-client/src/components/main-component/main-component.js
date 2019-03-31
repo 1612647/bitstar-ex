@@ -12,6 +12,7 @@ import HomeComponent from '../home-component/home-component';
 import NewsComponent from '../news-component/news-component';
 import LoginComponent from '../auth/login-component/login-component';
 import RegisterComponent from '../auth/register-component/register-component';
+import ForgotPasswordComponent from '../auth/forgot-password-component/forgot-password-component';
 import SupportComponent from '../support-component/support-component';
 
 //Import scss
@@ -49,9 +50,10 @@ class MainComponent extends Component {
                                 <Route path="/exchange" component={ExchangeComponent}></Route>
                                 <Route path="/margin" component={MarginComponent}></Route>
                                 <Route path="/news" exact component={NewsComponent}></Route>
+                                <Route path="/support" component={SupportComponent}></Route>
                                 <Route path="/login" component={LoginComponent}></Route>
                                 <Route path="/register" component={RegisterComponent}></Route>
-                                <Route path="/support" component={SupportComponent}></Route>
+                                <Route path="/forgot-password" component={ForgotPasswordComponent}></Route>
                             </div>
                         </Content>
                         <Footer>

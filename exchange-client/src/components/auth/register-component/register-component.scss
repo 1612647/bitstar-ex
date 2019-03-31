@@ -1,0 +1,7 @@
+//Import mixin
+@import '../../../common-styles/reponsive.scss';
+@import '../../../common-styles/auth-form.scss';
+
+.register-form {
+    @include auth-form;
+}
