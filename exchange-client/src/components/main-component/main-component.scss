@@ -1,8 +1,10 @@
+//Import reponsive mixin
 @import '../../common-styles/reponsive.scss';
 
-
 .side-bar {
+    position: relative;
     display: initial;
+    z-index: 1;
 
     @include md {
         display: none;
@@ -27,7 +29,7 @@
     main {
         padding: 24;
         background: #fff;
-        min-height: 360;
+        min-height: calc(100vh - 138px);
     }
 
     footer {

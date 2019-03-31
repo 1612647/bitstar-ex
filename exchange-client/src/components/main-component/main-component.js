@@ -1,10 +1,11 @@
 //Import library
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { Layout, Menu, Icon } from 'antd';
+import { Layout } from 'antd';
 
 //Import Component
-import NavBarComponent from '../common/navbar-component';
+import NavBarComponent from '../common/navbar-component/navbar-component';
+import SideBarComponent from '../common/sidebar-component/sidebar-component';
 import ExchangeComponent from '../trade/exchange-component/exchange-component';
 import MarginComponent from '../trade/margin-component/margin-component';
 import HomeComponent from '../home-component/home-component';
@@ -21,7 +22,7 @@ const {
 } = Layout;
 
 class MainComponent extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {};
     }
@@ -36,25 +37,7 @@ class MainComponent extends Component {
                         onBreakpoint={(broken) => { console.log(broken); }}
                         onCollapse={(collapsed, type) => { console.log(collapsed, type); }}
                     >
-                        <div className="logo" />
-                        <Menu className="side-menu" theme="dark" mode="inline" defaultSelectedKeys={['4']}>
-                            <Menu.Item key="1">
-                                <Icon type="user" />
-                                <span className="nav-text">nav 1</span>
-                            </Menu.Item>
-                            <Menu.Item key="2">
-                                <Icon type="video-camera" />
-                                <span className="nav-text">nav 2</span>
-                            </Menu.Item>
-                            <Menu.Item key="3">
-                                <Icon type="upload" />
-                                <span className="nav-text">nav 3</span>
-                            </Menu.Item>
-                            <Menu.Item key="4">
-                                <Icon type="user" />
-                                <span className="nav-text">nav 4</span>
-                            </Menu.Item>
-                        </Menu>
+                        <SideBarComponent />
                     </Sider>
                     <Layout id="main">
                         <Header>
