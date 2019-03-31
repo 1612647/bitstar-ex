@@ -2,10 +2,10 @@
 
 > Use m-e-r-n architecture
 
-[Node.js](https://nodejs.org)
+[Nodejs](https://nodejs.org)
 
-[Express.js](https://expressjs.com/)
+[Expressjs](https://expressjs.com/)
 
-[React.js](https://reactjs.org/)
+[Reactjs](https://reactjs.org/)
 
 [MongoDB](https://www.mongodb.com/)
