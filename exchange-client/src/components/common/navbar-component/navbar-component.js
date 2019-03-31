@@ -74,9 +74,6 @@ class NavBarComponent extends React.Component {
         <Menu.Item key="r-6" className="item right">
           <NavLink to={'/support'}>Support</NavLink>
         </Menu.Item>
-        <Menu.Item key="r-7" className="item right">
-          <NavLink to={'/login'}>Login</NavLink>
-        </Menu.Item>
 
       </Menu>
     );
