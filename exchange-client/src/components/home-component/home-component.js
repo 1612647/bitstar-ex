@@ -1,6 +1,6 @@
 import React from 'react';
 import PriceListComponent from '../price-list-component/price-list-main-component';
-import BannerComponent from '../common-components/banner-component';
+import BannerComponent from '../common/banner-component';
 import './home-component.scss';
 
 class HomeComponent extends React.Component{

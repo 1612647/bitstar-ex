@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.scss';
-import MainComponent from './components/main-component/main-component';
+import MainComponent from './main-component/main-component';
 import { BackTop } from 'antd';
 import 'antd/dist/antd.css';
 

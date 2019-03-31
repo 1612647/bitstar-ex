@@ -1,0 +1,2 @@
+export const COLUMNS_CONFIG = 'COLUMNS_CONFIG';
+export const SHOW_PAIRS = 'SHOW_PAIRS';

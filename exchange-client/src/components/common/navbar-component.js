@@ -2,6 +2,8 @@
 import React from 'react';
 import { Menu, Icon, Select, Typography } from 'antd';
 import 'antd/dist/antd.css';
+// import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 //Import custome scss
 import './navbar-component.scss';
@@ -31,17 +33,25 @@ class NavBarComponent extends React.Component {
         mode="horizontal"
       >
         <Menu.Item key="l-1" className="item show-sm">
-          <Title level={4}>BitStar</Title>
-
+          <Title level={4}>
+            <NavLink to={'/home'}>BitStar</NavLink>
+          </Title>
         </Menu.Item>
         <SubMenu key="l-2" className="item"
           title={<span className="submenu-title-wrapper"><Icon type="bank" />Exchange</span>}>
-          <Menu.Item key="setting:3">Basic</Menu.Item>
-          <Menu.Item key="setting:4">Advance</Menu.Item>
+          <Menu.Item key="setting:3">
+            <NavLink to={'/exchange'}>Basic</NavLink>
+          </Menu.Item>
+          <Menu.Item key="setting:4">
+            <NavLink to={'/exchange'}>Advance</NavLink>
+          </Menu.Item>
         </SubMenu>
         <Menu.Item key="l-3" className="item">
-          <a href="/" target="_blank" rel="noopener noreferrer">OTC</a>
+          <NavLink to={'/margin'}>Margin</NavLink>
         </Menu.Item>
+        {/* <Menu.Item key="l-3" className="item">
+          <a href="/" target="_blank" rel="noopener noreferrer">OTC</a>
+        </Menu.Item> */}
 
         <Menu.Item key="r-1" className="item right">
           <Select defaultValue="Language" style={{ width: 120 }} onChange={() => { }}>
@@ -50,20 +60,22 @@ class NavBarComponent extends React.Component {
           </Select>
         </Menu.Item>
         <Menu.Item key="r-2" className="item right show-sm">
-          <a href="/" target="_blank" >Login</a>
+          <NavLink to={'/login'}>Login</NavLink>
         </Menu.Item>
-        <span className="item right">or</span>
-        <Menu.Item key="r-3" className="item right show-sm">
-          <a href="/" target="_blank">Sign up</a>
-        </Menu.Item>
-        <Menu.Item key="r-4" className="item right">
-          <a href="/" target="_blank">News</a>
+
+        <Menu.Item key="r-3" className="item right">or</Menu.Item>
+
+        <Menu.Item key="r-4" className="item right show-sm">
+          <NavLink to={'/register'}>Register</NavLink>
         </Menu.Item>
         <Menu.Item key="r-5" className="item right">
-          <a href="/" target="_blank">Support</a>
+          <NavLink to={'/news'}>News</NavLink>
         </Menu.Item>
         <Menu.Item key="r-6" className="item right">
-          <a href="/" target="_blank">Join us</a>
+          <NavLink to={'/support'}>Support</NavLink>
+        </Menu.Item>
+        <Menu.Item key="r-7" className="item right">
+          <NavLink to={'/login'}>Login</NavLink>
         </Menu.Item>
 
       </Menu>
