@@ -26,6 +26,15 @@
             &.right {
                 float: right;
             }
+
+            &.only-text {
+                color: inherit;
+                border-bottom: 0;
+                &:hover{
+                    color: inherit;
+                    cursor: inherit;
+                }
+            }
         }
     }
 

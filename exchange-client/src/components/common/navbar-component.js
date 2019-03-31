@@ -63,7 +63,7 @@ class NavBarComponent extends React.Component {
           <NavLink to={'/login'}>Login</NavLink>
         </Menu.Item>
 
-        <Menu.Item key="r-3" className="item right">or</Menu.Item>
+        <Menu.Item key="r-3" className="item right only-text">or</Menu.Item>
 
         <Menu.Item key="r-4" className="item right show-sm">
           <NavLink to={'/register'}>Register</NavLink>
