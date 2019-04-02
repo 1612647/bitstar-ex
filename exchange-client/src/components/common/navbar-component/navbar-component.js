@@ -45,7 +45,7 @@ class NavBarComponent extends React.Component {
       >
         <Menu.Item key="l-1" className="item show-sm">
           <Title level={4}>
-            <NavLink to={'/home'}>BitStar</NavLink>
+            <NavLink to={'/'}>BitStar</NavLink>
           </Title>
         </Menu.Item>
         <SubMenu key="l-2" className="item"

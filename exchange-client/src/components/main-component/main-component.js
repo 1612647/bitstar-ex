@@ -1,25 +1,23 @@
 //Import library
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { Layout } from 'antd';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 //Import Component
+import HomeComponent from '../home-component/home-component';
 import NavBarComponent from '../common/navbar-component/navbar-component';
 import SideBarComponent from '../common/sidebar-component/sidebar-component';
-import ExchangeComponent from '../trade/exchange-component/exchange-component';
-import MarginComponent from '../trade/margin-component/margin-component';
-import HomeComponent from '../home-component/home-component';
-import NewsComponent from '../news-component/news-component';
-import LoginComponent from '../auth/login-component/login-component';
-import RegisterComponent from '../auth/register-component/register-component';
-import ForgotPasswordComponent from '../auth/forgot-password-component/forgot-password-component';
-import SupportComponent from '../support-component/support-component';
+
+//Import router config
+import routes from '../../router';
 
 //Import scss
 import './main-component.scss';
 
 //Import intl
 import { FormattedMessage } from 'react-intl';
+
+//Import ant-design 
+import { Layout } from 'antd';
 
 const {
     Header, Content, Footer, Sider,
@@ -30,6 +28,21 @@ class MainComponent extends Component {
         super(props);
         this.state = {};
     }
+
+    showContent = (routes => {
+        let result = null;
+        if (routes.length > 0) {
+            result = routes.map((route, index) => {
+                return (
+                    <Route key={index}
+                        path={route.path}
+                        exact={route.exact}
+                        component={route.component} />
+                )
+            })
+        }
+        return result;
+    })
 
     render() {
         return (
@@ -48,17 +61,10 @@ class MainComponent extends Component {
                             <NavBarComponent />
                         </Header>
                         <Content>
-                            <div>
-                                <Route path="/home" component={HomeComponent}></Route>
-                                <Route path="/exchange" component={ExchangeComponent}></Route>
-                                <Route path="/margin" component={MarginComponent}></Route>
-                                <Route path="/news" exact component={NewsComponent}></Route>
-                                <Route path="/support" component={SupportComponent}></Route>
-                                <Route path="/login" component={LoginComponent}></Route>
-                                <Route path="/register" component={RegisterComponent}></Route>
-                                <Route path="/forgot-password" component={ForgotPasswordComponent}></Route>
-                                <Route path="*" component={HomeComponent}></Route>
-                            </div>
+                            <Switch>
+                                <Route path="/" exact component={HomeComponent}></Route>
+                                {this.showContent(routes)}
+                            </Switch>
                         </Content>
                         <Footer>
                             <FormattedMessage id="footer.brand" /> ©2019 &nbsp;
