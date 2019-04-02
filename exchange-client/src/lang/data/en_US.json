@@ -1,0 +1,23 @@
+{
+    "menu.margin": "Margin",
+    "menu.exchange": "Exchange",
+    "menu.news": "News",
+    "menu.basic": "Basic",
+    "menu.advance": "Advance",
+    "menu.support": "Support",
+    "menu.login": "Login",
+    "menu.register": "Register",
+    "menu.or": "or",
+
+    "pairs.favorite": "Favorite",
+    "pairs.pair": "Pair",
+    "pairs.name": "Name",
+    "pairs.last_price": "Last Price",
+    "pairs.24h_change": "24h Change",
+    "pairs.24h_high": "24h High",
+    "pairs.24h_low": "24h Low",
+    "pairs.24h_vol": "24h Volume",
+
+    "footer.brand": "Bitstar Exchange",
+    "footer.createby": "Created by"
+}

@@ -1,5 +1,5 @@
 //Import constants
-import * as actionTypes from '../constants/action-types'
+import * as actionTypes from '../../constants/action-types';
 //Import actions
 // import showAll from '../actions';
 

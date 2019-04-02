@@ -18,6 +18,9 @@ import SupportComponent from '../support-component/support-component';
 //Import scss
 import './main-component.scss';
 
+//Import intl
+import { FormattedMessage } from 'react-intl';
+
 const {
     Header, Content, Footer, Sider,
 } = Layout;
@@ -54,10 +57,12 @@ class MainComponent extends Component {
                                 <Route path="/login" component={LoginComponent}></Route>
                                 <Route path="/register" component={RegisterComponent}></Route>
                                 <Route path="/forgot-password" component={ForgotPasswordComponent}></Route>
+                                <Route path="*" component={HomeComponent}></Route>
                             </div>
                         </Content>
                         <Footer>
-                            BitStar Exchange ©2019 Created by thi174hcmus
+                            <FormattedMessage id="footer.brand" /> ©2019 &nbsp;
+                            <FormattedMessage id="footer.createby" /> thi174hcmus &nbsp;
                         </Footer>
                     </Layout>
 

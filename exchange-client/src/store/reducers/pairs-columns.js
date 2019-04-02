@@ -1,5 +1,5 @@
 //Import constant 
-import * as actionTypes from '../constants/action-types';
+import * as actionTypes from '../../constants/action-types';
 
 var initializeState = [{
 

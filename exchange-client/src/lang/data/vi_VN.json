@@ -1,0 +1,23 @@
+{
+    "menu.margin": "Phái sinh",
+    "menu.exchange": "Thị trường",
+    "menu.basic": "Cơ bản",
+    "menu.advance": "Nâng cao",
+    "menu.news": "Tin tức",
+    "menu.support": "Hỗ trợ",
+    "menu.login": "Đăng nhập",
+    "menu.register": "Đăng ký",
+    "menu.or": "hoặc",
+
+    "pairs.favorite": "Yêu thích",
+    "pairs.pair": "Cặp",
+    "pairs.name": "Tên",
+    "pairs.last_price": "Giá",
+    "pairs.24h_change": "Thay đổi 24h",
+    "pairs.24h_high": "Cao nhất 24h",
+    "pairs.24h_low": "Thấp nhất 24h",
+    "pairs.24h_vol": "Khối lượng 24h",
+
+    "footer.brand": "Sàn giao dịch Bitstar",
+    "footer.createby": "Bản quyền thuộc về"
+}

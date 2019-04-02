@@ -11,12 +11,12 @@ import App from './components/App';
 
 // Import Redux store
 import { createStore } from 'redux';
-import reducers from './reducers';
+import reducers from './store/reducers';
 
 //Import provider to connect redux with view
 import { Provider } from 'react-redux';
 
-//
+//create store
 const store = createStore(reducers);
 
 ReactDOM.render(
