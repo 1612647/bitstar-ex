@@ -1,6 +1,9 @@
 # Bitstar Exchange
 
-> Use m-e-r-n architecture
+[https://bitstar.thi174hcmus.now.sh/](https://bitstar.thi174hcmus.now.sh/)
+
+
+> Use mern architecture
 
 [Nodejs](https://nodejs.org)
 
