@@ -1,8 +1,12 @@
 
+//Import react library
 import React from 'react';
-import { Carousel } from 'antd';
-import 'antd/dist/antd.css';
+
+//Import custome scss
 import './banner-component.scss';
+
+//Import ant-design 
+import { Carousel } from 'antd';
 
 
 class NavBarComponent extends React.Component {
@@ -20,10 +24,10 @@ class NavBarComponent extends React.Component {
     render() {
         return (
             <Carousel autoplay>
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
+                <div className="banner"></div>
+                <div className="banner"></div>
+                <div className="banner"></div>
+                <div className="banner"></div>
             </Carousel>
         );
     }

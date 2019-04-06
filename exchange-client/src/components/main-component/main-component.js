@@ -1,11 +1,13 @@
 //Import library
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
 //Import Component
+import ScrollToTop from '../common/scroll-to-top/scroll-to-top';
 import HomeComponent from '../home-component/home-component';
 import NavBarComponent from '../common/navbar-component/navbar-component';
 import SideBarComponent from '../common/sidebar-component/sidebar-component';
+import FooterComponent from '../common/footer-component/footer-component';
 
 //Import router config
 import routes from '../../router';
@@ -47,33 +49,33 @@ class MainComponent extends Component {
     render() {
         return (
             <Router>
-                <Layout>
-                    <Sider className="side-bar"
-                        breakpoint="md"
-                        collapsedWidth="0"
-                        onBreakpoint={(broken) => { console.log(broken); }}
-                        onCollapse={(collapsed, type) => { console.log(collapsed, type); }}
-                    >
-                        <SideBarComponent />
-                    </Sider>
-                    <Layout id="main">
-                        <Header>
-                            <NavBarComponent />
-                        </Header>
-                        <Content>
-                            <Switch>
-                                <Route path="/" exact component={HomeComponent}></Route>
-                                {this.showContent(routes)}
-                            </Switch>
-                        </Content>
-                        <Footer>
-                            <FormattedMessage id="footer.brand" /> ©2019 &nbsp;
-                            <FormattedMessage id="footer.createby" /> thi174hcmus &nbsp;
-                        </Footer>
+                <ScrollToTop>
+                    <Layout>
+                        <Sider className="side-bar"
+                            breakpoint="md"
+                            collapsedWidth="0"
+                            onBreakpoint={(broken) => { console.log(broken); }}
+                            onCollapse={(collapsed, type) => { console.log(collapsed, type); }}
+                        >
+                            <SideBarComponent />
+                        </Sider>
+                        <Layout id="main">
+                            <Header>
+                                <NavBarComponent />
+                            </Header>
+                            <Content>
+                                <Switch>
+                                    <Route name="home" path="/" exact component={HomeComponent}></Route>
+                                    {this.showContent(routes)}
+                                </Switch>
+                            </Content>
+                            <Footer>
+                                <FooterComponent />
+                            </Footer>
+                        </Layout>
+
                     </Layout>
-
-                </Layout>
-
+                </ScrollToTop>
             </Router>
 
         );

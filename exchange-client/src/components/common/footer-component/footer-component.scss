@@ -1,0 +1,75 @@
+//Import reponsive mixin
+@import '../../../common-styles/common-styles.scss';
+
+#footer-component {
+    background-color: $footer-bg-color;
+
+    .menu {
+        padding: 2em 1em;
+        text-align: left;
+
+        h3 {
+            color: $footer-color-title;
+        }
+
+        .ant-list-item {
+            a {
+                color: $footer-color-text;
+            }
+        }
+
+        .brand {
+            color: $footer-color-brand;
+            text-align: center;
+
+            h1 {
+                font-size: 40px;
+                color: $footer-color-brand;
+            }
+
+            .icon {
+                margin: 0 1em;
+                font-size: 16px;
+                color: $footer-color-brand;
+
+                &:hover {
+                    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+                    transform: translate3d(0, 0, 0);
+                    backface-visibility: hidden;
+                    perspective: 1000px;
+                }
+
+            }
+        }
+    }
+
+    .copyright {
+        border-top: 1px solid $footer-color-text;
+        padding: 1em;
+        color: $footer-color-text;
+    }
+}
+
+@keyframes shake {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}

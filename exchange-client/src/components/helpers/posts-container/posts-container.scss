@@ -1,0 +1,18 @@
+@import '../../../common-styles/common-styles.scss';
+
+#posts-container {
+    margin-top: 1em;
+
+    .post-list {
+        padding-left: 1em;
+
+        .post-title {
+            padding-right: 0.5em;
+            text-align: justify;
+        }
+
+        .post-time {
+            text-align: right;
+        }
+    }
+}

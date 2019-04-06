@@ -3,7 +3,7 @@ import React from 'react';
 class MarginComponent extends React.Component{
     render(){
         return(
-            <div>margin</div>
+            <div id="margin">margin</div>
         )
     }
 }

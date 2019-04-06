@@ -1,0 +1,33 @@
+@import '../../../common-styles/common-styles.scss';
+
+#exchange {
+    .pair-name {
+        padding-right: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        .pair-base {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: $color-black;
+        }
+
+        .pair-fullname {
+            color: $color-black;
+        }
+    }
+
+    .pair-info-lable {
+        line-height: 2.7em;
+    }
+
+    .pair-info-value {
+        font-weight: 700;
+        color: $color-black;
+
+        .price-changed {
+            color: $color-success;
+        }
+    }
+}

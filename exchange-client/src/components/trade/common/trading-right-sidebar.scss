@@ -1,0 +1,25 @@
+#trading-right-sidebar {
+
+    .market-tab {
+        .ant-table {
+            margin-top: 15px;
+        }
+    }
+
+    .ant-table {
+        // border: 0;
+
+        .ant-table-thead,
+        .ant-table-tbody {
+            tr {
+                th {
+                    border: 0 !important;
+                }
+
+                td {
+                    border: 0;
+                }
+            }
+        }
+    }
+}

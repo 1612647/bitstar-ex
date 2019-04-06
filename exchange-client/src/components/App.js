@@ -18,8 +18,6 @@ import { connect } from 'react-redux';
 
 //Import ant-design
 import { BackTop } from 'antd';
-import 'antd/dist/antd.css';
-
 
 class App extends Component {
   render() {

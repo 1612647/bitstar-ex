@@ -14,7 +14,6 @@ import * as actions from '../../../store/actions';
 
 //Inport ant design 
 import { Menu, Icon, Select, Typography } from 'antd';
-import 'antd/dist/antd.css';
 
 const SubMenu = Menu.SubMenu;
 const Option = Select.Option;
@@ -50,22 +49,22 @@ class NavBarComponent extends React.Component {
         </Menu.Item>
         <SubMenu key="l-2" className="item"
           title={<span className="submenu-title-wrapper"><Icon type="bank" />
-            <FormattedMessage id="menu.exchange" />
+            <FormattedMessage id="app.menu.exchange" />
           </span>}>
           <Menu.Item key="setting:3">
             <NavLink to={'/exchange'}>
-              <FormattedMessage id="menu.basic" />
+              <FormattedMessage id="app.menu.basic" />
             </NavLink>
           </Menu.Item>
           <Menu.Item key="setting:4">
             <NavLink to={'/exchange'}>
-              <FormattedMessage id="menu.advance" />
+              <FormattedMessage id="app.menu.advance" />
             </NavLink>
           </Menu.Item>
         </SubMenu>
         <Menu.Item key="l-3" className="item">
-          <NavLink to={'/margin'}>
-            <FormattedMessage id="menu.margin" />
+          <NavLink to={'/exchange'}>
+            <FormattedMessage id="app.menu.margin" />
           </NavLink>
         </Menu.Item>
         {/* <Menu.Item key="l-3" className="item">
@@ -80,27 +79,27 @@ class NavBarComponent extends React.Component {
         </Menu.Item>
         <Menu.Item key="r-2" className="item right show-sm">
           <NavLink to={'/login'}>
-            <FormattedMessage id="menu.login" />
+            <FormattedMessage id="app.menu.login" />
           </NavLink>
         </Menu.Item>
 
         <Menu.Item key="r-3" className="item right only-text">
-            <FormattedMessage id="menu.or" />
+            <FormattedMessage id="app.menu.or" />
         </Menu.Item>
 
         <Menu.Item key="r-4" className="item right show-sm">
           <NavLink to={'/register'}>
-            <FormattedMessage id="menu.register" />
+            <FormattedMessage id="app.menu.register" />
           </NavLink>
         </Menu.Item>
         <Menu.Item key="r-5" className="item right">
-          <NavLink to={'/news'}>
-            <FormattedMessage id="menu.news" />
+          <NavLink to={'/announcements'}>
+            <FormattedMessage id="app.menu.news" />
           </NavLink>
         </Menu.Item>
         <Menu.Item key="r-6" className="item right">
           <NavLink to={'/support'}>
-            <FormattedMessage id="menu.support" />
+            <FormattedMessage id="app.menu.support" />
           </NavLink>
         </Menu.Item>
 

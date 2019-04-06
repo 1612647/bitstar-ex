@@ -1,0 +1,22 @@
+@import '../../../common-styles/common-styles.scss';
+
+#posts-component {
+    margin: 1em auto;
+    padding: 2em;
+    max-width: $max-width-content;
+    background-color: $bg-color-default;
+    min-height: 100%;
+
+    .post-list {
+        padding-left: 1em;
+
+        .post-title {
+            padding-right: 0.5em;
+            text-align: justify;
+        }
+
+        .post-time {
+            text-align: right;
+        }
+    }
+}

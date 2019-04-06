@@ -5,6 +5,9 @@ import { NavLink } from 'react-router-dom';
 //Import custome scss
 import './forgot-password-component.scss';
 
+//Import intl
+import { FormattedMessage } from 'react-intl';
+
 //Import ant-design
 import { Form, Icon, Input, Button } from 'antd';
 
@@ -25,17 +28,26 @@ class ForgotPasswordComponent extends React.Component {
             <Form onSubmit={this.handleSubmit} className="forgot-password-form">
                 <Form.Item>
                     {getFieldDecorator('email', {
-                        rules: [{ required: true, message: 'Please input your email!' }],
+                        rules: [{
+                            required: true,
+                            message: <FormattedMessage id="app.forgot_pw.validate.email.required" />
+                        }],
                     })(
                         <Input prefix={<Icon type="mail" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Email" />
                     )}
                 </Form.Item>
                 <Form.Item>
                     <Button type="primary" htmlType="submit" className="forgot-pw-form-button">
-                        Send
+                        <FormattedMessage id="app.forgot_pw.send" />
                     </Button>
-                    <NavLink className="login-form-forgot" to={'/login'}>Login</NavLink>
-                    <span className="register-form-forgot">Or <NavLink to={'/register'}>Register</NavLink></span>
+                    <NavLink className="login-form-forgot" to={'/login'}>
+                        <FormattedMessage id="app.forgot_pw.login" />
+                    </NavLink>
+                    <span className="register-form-forgot">
+                        <FormattedMessage id="app.forgot_pw.or" />
+                        <NavLink to={'/register'}>
+                            <FormattedMessage id="app.forgot_pw.register" />
+                        </NavLink></span>
                 </Form.Item>
             </Form>
         )

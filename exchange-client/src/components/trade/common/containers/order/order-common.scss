@@ -1,0 +1,16 @@
+#limit-order,
+#market-order,
+#stop-limit-order,
+#stop-market-order {
+    .ant-form-item {
+        margin: 0;
+
+        .ant-input-number {
+            width: 100%;
+        }
+
+        .ant-form-item-label {
+            text-align: left;
+        }
+    }
+}

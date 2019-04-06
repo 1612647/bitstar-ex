@@ -5,6 +5,9 @@ import { NavLink } from 'react-router-dom';
 //Import custome scss
 import './login-component.scss';
 
+//Import intl
+import { FormattedMessage } from 'react-intl';
+
 //Import ant-design
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 
@@ -24,17 +27,23 @@ class LoginComponent extends React.Component {
         return (
             <Form onSubmit={this.handleSubmit} className="login-form">
                 <Form.Item>
-                    {getFieldDecorator('userName', {
-                        rules: [{ required: true, message: 'Please input your username!' }],
+                    {getFieldDecorator('email', {
+                        rules: [{
+                            required: true,
+                            message: <FormattedMessage id="app.register.validate.email.required" />
+                        }],
                     })(
-                        <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Username" />
+                        <Input prefix={<Icon type="mail" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Your email" />
                     )}
                 </Form.Item>
                 <Form.Item>
                     {getFieldDecorator('password', {
-                        rules: [{ required: true, message: 'Please input your Password!' }],
+                        rules: [{
+                            required: true,
+                            message: <FormattedMessage id="app.register.validate.password.required" />
+                        }],
                     })(
-                        <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Password" />
+                        <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Your password" />
                     )}
                 </Form.Item>
                 <Form.Item>
@@ -42,13 +51,20 @@ class LoginComponent extends React.Component {
                         valuePropName: 'checked',
                         initialValue: true,
                     })(
-                        <Checkbox>Remember me</Checkbox>
+                        <Checkbox>
+                            <FormattedMessage id="app.login.remmeber_me" />
+                        </Checkbox>
                     )}
-                    <NavLink className="login-form-forgot" to={'/forgot-password'}>Forgot password</NavLink>
+                    <NavLink className="login-form-forgot" to={'/forgot-password'}>
+                        <FormattedMessage id="app.login.forgot_pw" />
+                    </NavLink>
                     <Button type="primary" htmlType="submit" className="login-form-button">
-                        Log in
+                        <FormattedMessage id="app.login.login" />
                     </Button>
-                    Or <NavLink to={'/register'}>register now</NavLink>
+                    <FormattedMessage id="app.login.or" />&nbsp;
+                    <NavLink to={'/register'}>
+                        <FormattedMessage id="app.login.register_now" />
+                    </NavLink>
                 </Form.Item>
             </Form>
         )

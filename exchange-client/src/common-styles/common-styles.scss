@@ -1,0 +1,76 @@
+$bg-color-default: #fff;
+$color-text-default: rgb(153, 153, 153);
+$color-success: #70C040;
+$color-danger: #E23C39;
+$color-white: #fff;
+$color-black: rgb(51, 51, 51);
+
+$footer-bg-color: #017922;
+$footer-color-title: #eaeeae;
+$footer-color-text: #72c598;
+$footer-color-brand: #d3f7d6;
+
+//max width of announcement
+$max-width-content: 1200px;
+
+* {
+    &:not[type="submit"] {
+        color: $color-text-default;
+    }
+}
+
+button {
+    color: $color-white;
+}
+
+.btn-buy {
+
+    background-color: $color-success;
+    border-color: $color-success;
+    color: $color-white;
+
+    * {
+        color: $color-white;
+    }
+
+    &:hover {
+        border-color: $color-success;
+        color: $color-success;
+
+        * {
+            color: $color-success;
+        }
+    }
+
+    &:not(:hover) {
+        &:focus {
+            @extend .btn-buy;
+        }
+
+    }
+}
+
+.btn-sell {
+    background-color: $color-danger;
+    border-color: $color-danger;
+    color: $color-white;
+
+    * {
+        color: $color-white;
+    }
+
+    &:hover {
+        border-color: $color-danger;
+        color: $color-danger;
+
+        * {
+            color: $color-danger;
+        }
+    }
+
+    &:not(:hover) {
+        &:focus {
+            @extend .btn-sell;
+        }
+    }
+}

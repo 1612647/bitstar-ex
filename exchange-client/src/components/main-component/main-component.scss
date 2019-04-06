@@ -30,12 +30,18 @@
         padding: 0;
     }
 
-    main {
-        padding: 24;
+    &>main {
         min-height: calc(100vh - 118px);
+
+        &>div {
+            &>.ant-layout {
+                padding: 24px 20px !important;
+            }
+        }
     }
 
-    footer {
+    &>footer {
+        padding: 0;
         text-align: center;
     }
 }

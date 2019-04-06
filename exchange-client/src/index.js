@@ -5,6 +5,11 @@ import * as serviceWorker from './serviceWorker';
 
 //Import scss
 import './index.scss';
+import 'antd/dist/antd.css';
+import './common-styles/common-styles.scss'
+
+//Config ant-design theme
+// import './libs/config-overrides';
 
 //Import App component
 import App from './components/App';

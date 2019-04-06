@@ -1,6 +1,11 @@
+//Import react library
 import React from 'react';
+
+//Import components
 import PriceListComponent from '../price-list-component/price-list-main-component';
-import BannerComponent from '../common/banner-component';
+import BannerComponent from '../common/banner-component/banner-component';
+
+//Import custome scss
 import './home-component.scss';
 
 class HomeComponent extends React.Component{

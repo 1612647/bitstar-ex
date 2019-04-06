@@ -1,0 +1,39 @@
+@import '../../../common-styles/common-styles.scss';
+
+#support-component {
+    margin: 1em auto;
+    padding: 2em;
+    max-width: $max-width-content;
+    background-color: $bg-color-default;
+    min-height: 100%;
+
+    .btn-group {
+        padding: 20px 0;
+        border-bottom: 1px solid #ccc;
+
+        .ant-col-12 {
+            padding: 10px 0;
+
+            &:nth-child(1) {
+                padding-right: 20px;
+            }
+
+            &:nth-child(2) {
+                padding-left: 20px;
+            }
+
+            button {
+                height: 50px;
+            }
+        }
+    }
+
+    .form-request {
+        margin-top: 15px;
+
+        .title {
+            text-align: center;
+            padding: 20px;
+        }
+    }
+}

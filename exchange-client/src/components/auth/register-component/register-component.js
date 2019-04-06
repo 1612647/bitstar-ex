@@ -4,6 +4,9 @@ import React from 'react';
 //Import custome scss
 import './register-component.scss';
 
+//Import intl
+import { FormattedMessage } from 'react-intl';
+
 //import ant-design
 import {
     Form, Input, Tooltip, Icon, Select, Row, Col, Checkbox, Button, AutoComplete, Typography
@@ -99,21 +102,31 @@ class RegisterComponent extends React.Component {
         ));
         return (
             <Form {...formItemLayout} onSubmit={this.handleSubmit} className="register-form">
-                <Form.Item label="E-mail">
+                <Form.Item label={(
+                    <span>
+                        <FormattedMessage id="app.register.email" />
+                    </span>
+                )}>
                     {getFieldDecorator('email', {
                         rules: [{
-                            type: 'email', message: 'The input is not valid E-mail!',
+                            type: 'email', message: <FormattedMessage id="app.register.validate.email.email" />,
                         }, {
-                            required: true, message: 'Please input your E-mail!',
+                            required: true,
+                            message: <FormattedMessage id="app.register.validate.email.required" />,
                         }],
                     })(
                         <Input />
                     )}
                 </Form.Item>
-                <Form.Item label="Password">
+                <Form.Item label={(
+                    <span>
+                        <FormattedMessage id="app.register.password" />
+                    </span>
+                )}>
                     {getFieldDecorator('password', {
                         rules: [{
-                            required: true, message: 'Please input your password!',
+                            required: true,
+                            message: <FormattedMessage id="app.register.validate.password.required" />,
                         }, {
                             validator: this.validateToNextPassword,
                         }],
@@ -121,10 +134,15 @@ class RegisterComponent extends React.Component {
                         <Input type="password" />
                     )}
                 </Form.Item>
-                <Form.Item label="Confirm Password">
+                <Form.Item label={(
+                    <span>
+                        <FormattedMessage id="app.register.confirm_password" />
+                    </span>
+                )}>
                     {getFieldDecorator('confirm', {
                         rules: [{
-                            required: true, message: 'Please confirm your password!',
+                            required: true,
+                            message: <FormattedMessage id="app.register.validate.confirm_password.required" />,
                         }, {
                             validator: this.compareToFirstPassword,
                         }],
@@ -133,64 +151,95 @@ class RegisterComponent extends React.Component {
                     )}
                 </Form.Item>
                 <Form.Item label={(
-                    <span>Nickname&nbsp;
-                            <Tooltip title="What do you want others to call you?">
+                    <span>
+                        <FormattedMessage id="app.register.fullname" />&nbsp;
+                            <Tooltip title="Need to verify your account">
                             <Icon type="question-circle-o" />
                         </Tooltip>
                     </span>
                 )}>
-                    {getFieldDecorator('nickname', {
-                        rules: [{ required: true, message: 'Please input your nickname!', whitespace: true }],
+                    {getFieldDecorator('fullname', {
+                        rules: [{
+                            required: true,
+                            message: <FormattedMessage id="app.register.validate.fullname.required" />,
+                            whitespace: true
+                        }],
                     })(
                         <Input />
                     )}
                 </Form.Item>
-                <Form.Item label="Phone Number">
+                <Form.Item label={(
+                    <span>
+                        <FormattedMessage id="app.register.phone" />
+                    </span>
+                )}>
                     {getFieldDecorator('phone', {
-                        rules: [{ required: true, message: 'Please input your phone number!' }],
+                        rules: [{
+                            required: true,
+                            message: <FormattedMessage id="app.register.validate.phone.required" />
+                        }],
                     })(
                         <Input addonBefore={prefixSelector} style={{ width: '100%' }} />
                     )}
                 </Form.Item>
-                <Form.Item label="Website">
-                    {getFieldDecorator('website', {
-                        rules: [{ required: true, message: 'Please input website!' }],
-                    })(
-                        <AutoComplete
-                            dataSource={websiteOptions}
-                            onChange={this.handleWebsiteChange}
-                            placeholder="website"
-                        >
-                            <Input />
-                        </AutoComplete>
-                    )}
-                </Form.Item>
-                <Form.Item label="Captcha"
-                    extra="We must make sure that your are a human.">
+                <Form.Item label={(
+                    <span>
+                        <FormattedMessage id="app.register.captcha" />
+                    </span>
+                )} extra={(
+                    <span>
+                        <FormattedMessage id="app.register.capcha_message" />
+                    </span>
+                )}>
                     <Row gutter={8}>
                         <Col span={12}>
                             {getFieldDecorator('captcha', {
-                                rules: [{ required: true, message: 'Please input the captcha you got!' }],
+                                rules: [{
+                                    required: true,
+                                    message: <FormattedMessage id="app.register.validate.captcha.required" />
+                                }],
                             })(
                                 <Input />
                             )}
                         </Col>
                         <Col span={12}>
-                            <Button>Get captcha</Button>
+                            <Button>
+                                <FormattedMessage id="app.register.get_captcha" />
+                            </Button>
                         </Col>
                     </Row>
+                </Form.Item>
+                <Form.Item label={(
+                    <span>
+                        <FormattedMessage id="app.register.referral_id" />&nbsp;
+                        (<FormattedMessage id="app.register.optional" />)&nbsp;
+                            <Tooltip title="">
+                            <Icon type="question-circle-o" />
+                        </Tooltip>
+                    </span>
+                )}>
+                    {getFieldDecorator('referralId', {
+
+                    })(
+                        <Input />
+                    )}
                 </Form.Item>
                 <Form.Item {...tailFormItemLayout}>
                     {getFieldDecorator('agreement', {
                         valuePropName: 'checked',
                     })(
-                        <Checkbox>I have read the
-                            <Text type="secondary">agreement</Text>
+                        <Checkbox>
+                            <FormattedMessage id="app.register.agreement.pre" />
+                            <Text type="secondary">
+                                <FormattedMessage id="app.register.agreement" />
+                            </Text>
                         </Checkbox>
                     )}
                 </Form.Item>
                 <Form.Item {...tailFormItemLayout}>
-                    <Button type="primary" htmlType="submit">Register</Button>
+                    <Button type="primary" htmlType="submit">
+                        <FormattedMessage id="app.register.register" />
+                    </Button>
                 </Form.Item>
             </Form>
         )

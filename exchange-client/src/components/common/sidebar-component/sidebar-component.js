@@ -3,7 +3,6 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 //Import ant-design
-import 'antd/dist/antd.css';
 import { Menu, Icon } from 'antd';
 
 //Import custome scss
