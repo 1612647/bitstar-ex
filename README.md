@@ -3,7 +3,7 @@
 [https://bitstar.thi174hcmus.now.sh/](https://bitstar.thi174hcmus.now.sh/)
 
 
-> Use mern architecture
+> Use mern stack
 
 [Nodejs](https://nodejs.org)
 
